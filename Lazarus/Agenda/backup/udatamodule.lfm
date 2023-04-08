@@ -1,0 +1,105 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 400
+  HorizontalOffset = 620
+  VerticalOffset = 171
+  Width = 534
+  PPI = 120
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Catalog = 'agenda'
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'agenda'
+    User = 'root'
+    Password = 'root'
+    Protocol = 'mysql-5'
+    Left = 104
+    Top = 64
+  end
+  object TableGrupo: TZTable
+    Connection = ZConnection
+    TableName = 'grupo'
+    Left = 208
+    Top = 64
+    object TableGrupoCODGRUPO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODGRUPO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object TableGrupoNOME: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 300
+    end
+  end
+  object TableContato: TZTable
+    Connection = ZConnection
+    TableName = 'contato'
+    Left = 320
+    Top = 64
+    object TableContatoCODCONTATO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODCONTATO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object TableContatoCODGRUPO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODGRUPO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object TableContatoNOME: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1000
+    end
+    object TableContatoTELEFONE: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object TableContatoCELULAR: TStringField
+      FieldKind = fkData
+      FieldName = 'CELULAR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+end

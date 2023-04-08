@@ -1,0 +1,32 @@
+object FormPrincipal: TFormPrincipal
+  Left = 349
+  Height = 518
+  Top = 46
+  Width = 722
+  Caption = 'Sistema de Agenda'
+  DesignTimePPI = 144
+  Menu = MainMenu1
+  LCLVersion = '2.2.0.4'
+  object MainMenu1: TMainMenu
+    Left = 38
+    Top = 19
+    object MenuItemPrincipal: TMenuItem
+      Caption = 'Principal'
+      object MenuItemSair: TMenuItem
+        Caption = 'Sair'
+        OnClick = MenuItemSairClick
+      end
+    end
+    object MenuItemCadastros: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItemGrupo: TMenuItem
+        Caption = 'Grupo'
+        OnClick = MenuItemGrupoClick
+      end
+      object MenuItemContato: TMenuItem
+        Caption = 'Contato'
+        OnClick = MenuItemContatoClick
+      end
+    end
+  end
+end

@@ -1,0 +1,50 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 330
+  HorizontalOffset = 1369
+  VerticalOffset = 627
+  Width = 387
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Catalog = 'escola'
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'escola'
+    User = 'root'
+    Password = 'root'
+    Protocol = 'mysql-5'
+    Left = 32
+    Top = 32
+  end
+  object TabelaAluno: TZTable
+    Connection = ZConnection
+    TableName = 'aluno'
+    Left = 144
+    Top = 32
+    object TabelaAlunocod_aluno: TLongintField
+      FieldKind = fkData
+      FieldName = 'cod_aluno'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object TabelaAlunonome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 500
+    end
+  end
+end

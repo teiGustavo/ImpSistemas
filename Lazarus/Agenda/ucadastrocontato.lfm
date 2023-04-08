@@ -1,0 +1,123 @@
+object FormCadastroContato: TFormCadastroContato
+  Left = 518
+  Height = 720
+  Top = 172
+  Width = 960
+  Caption = 'Cadastro Contato'
+  ClientHeight = 720
+  ClientWidth = 960
+  DesignTimePPI = 144
+  OnShow = FormShow
+  LCLVersion = '2.2.0.4'
+  object DBNavigator: TDBNavigator
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 595
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 48
+    ClientWidth = 595
+    DataSource = DsContato
+    Options = []
+    TabOrder = 0
+  end
+  object DBGrid: TDBGrid
+    Left = 0
+    Height = 424
+    Top = 296
+    Width = 960
+    Align = alBottom
+    Color = clWindow
+    Columns = <>
+    DataSource = DsContato
+    TabOrder = 1
+  end
+  object EditNome: TDBEdit
+    Left = 8
+    Height = 33
+    Top = 88
+    Width = 624
+    DataField = 'NOME'
+    DataSource = DsContato
+    MaxLength = 1000
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 25
+    Top = 56
+    Width = 49
+    Caption = 'Nome'
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 25
+    Top = 128
+    Width = 65
+    Caption = 'Telefone'
+  end
+  object EditTelefone: TDBEdit
+    Left = 8
+    Height = 33
+    Top = 160
+    Width = 272
+    DataField = 'TELEFONE'
+    DataSource = DsContato
+    MaxLength = 50
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 352
+    Height = 25
+    Top = 128
+    Width = 53
+    Caption = 'Celular'
+  end
+  object EditCelular: TDBEdit
+    Left = 352
+    Height = 33
+    Top = 160
+    Width = 272
+    DataField = 'CELULAR'
+    DataSource = DsContato
+    MaxLength = 50
+    TabOrder = 4
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 8
+    Height = 33
+    Top = 232
+    Width = 270
+    DataField = 'CODGRUPO'
+    DataSource = DsContato
+    KeyField = 'CODGRUPO'
+    ListField = 'NOME'
+    ListFieldIndex = 0
+    ListSource = DsGrupo
+    LookupCache = False
+    TabOrder = 5
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 25
+    Top = 200
+    Width = 50
+    Caption = 'Grupo'
+  end
+  object DsContato: TDataSource
+    DataSet = DM.TableContato
+    Left = 704
+    Top = 64
+  end
+  object DsGrupo: TDataSource
+    DataSet = DM.TableGrupo
+    Left = 840
+    Top = 64
+  end
+end

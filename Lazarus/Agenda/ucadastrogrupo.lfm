@@ -1,0 +1,63 @@
+object FormCadastroGrupo: TFormCadastroGrupo
+  Left = 410
+  Height = 720
+  Top = 410
+  Width = 960
+  Caption = 'Cadastro de Grupo'
+  ClientHeight = 720
+  ClientWidth = 960
+  DesignTimePPI = 144
+  OnShow = FormShow
+  LCLVersion = '2.2.0.4'
+  object DBNavigator: TDBNavigator
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 595
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 48
+    ClientWidth = 595
+    DataSource = DSGrupo
+    Options = []
+    TabOrder = 0
+  end
+  object DBGrid: TDBGrid
+    Left = 0
+    Height = 442
+    Top = 278
+    Width = 960
+    Align = alBottom
+    Color = clWindow
+    Columns = <>
+    DataSource = DSGrupo
+    TabOrder = 1
+  end
+  object EditNome: TDBEdit
+    Left = 10
+    Height = 33
+    Top = 106
+    Width = 475
+    DataField = 'NOME'
+    DataSource = DSGrupo
+    MaxLength = 300
+    TabOrder = 2
+  end
+  object LabelNome: TLabel
+    Left = 10
+    Height = 25
+    Top = 77
+    Width = 49
+    Caption = 'Nome'
+  end
+  object DSGrupo: TDataSource
+    DataSet = DM.TableGrupo
+    Left = 1072
+    Top = 88
+  end
+end

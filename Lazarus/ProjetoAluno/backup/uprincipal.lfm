@@ -1,0 +1,21 @@
+object FormPrincipal: TFormPrincipal
+  Left = 326
+  Height = 240
+  Top = 134
+  Width = 320
+  Caption = 'Projeto Aluno'
+  Menu = MainMenuPrincipal
+  LCLVersion = '2.2.0.4'
+  object MainMenuPrincipal: TMainMenu
+    Left = 56
+    Top = 16
+    object MenuItemCadastros: TMenuItem
+      Caption = 'Cadastros'
+      OnClick = MenuItemCadastrosClick
+      object MenuItemAluno: TMenuItem
+        Caption = 'Aluno'
+        OnClick = MenuItemAlunoClick
+      end
+    end
+  end
+end
