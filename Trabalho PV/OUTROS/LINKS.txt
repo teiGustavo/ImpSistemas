@@ -1,0 +1,1 @@
+https://elias.praciano.com/2015/06/como-formatar-a-exibicao-das-datas-do-mysql/#:~:text=Como%20usar%20as%20funções%20de%20formatação%20de%20data%20e%20hora%20no%20MySQL&text=A%20função%20DATE_FORMAT()%20usa,o%20resultado%20deverá%20ser%20exibido.&text=Nome%20do%20mês%20abreviado%20(Jan%2C%20Feb%2C%20Mar%20etc.)

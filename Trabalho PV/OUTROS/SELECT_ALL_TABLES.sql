@@ -1,0 +1,8 @@
+SET lc_time_names=pt_BR;
+select M.nomemedico, P.nomepaciente, DATE_FORMAT(C.dataconsulta, '%d de %M de %Y') as dataconsulta, CONCAT('R$ ', REPLACE(REPLACE(REPLACE(FORMAT(C.valorconsulta, 2),'.',';'),',','.'),';',',')) as valorconsulta, CM.nomeconvenio, CD.nomecidade from medico as M, cidade as CD, paciente as P, convenio as CM, consulta as C, rel_medico_convenio as MC
+WHERE M.codmedico = C.codmedico AND P.codpaciente = C.codpaciente AND CD.codcidade = M.codcidade AND CM.codconvenio = MC.codconvenio AND M.codmedico = MC.codmedico
+ORDER BY nomemedico;
+
+SELECT M.nomemedico as 'Nome do médico', CONCAT('R$ ', REPLACE(REPLACE(REPLACE(FORMAT(SUM(C.valorconsulta), 2),'.',';'),',','.'),';',',')) as 'Valor total das consultas realizadas', CM.nomeconvenio as 'Nome do convênio', (SELECT CONCAT('R$ ', REPLACE(REPLACE(REPLACE(FORMAT(SUM(C.valorconsulta), 2),'.',';'),',','.'),';',',')) FROM consulta as C, convenio as CM, medico as M, rel_medico_convenio as MC WHERE CM.nomeconvenio = 'Golden Cross' AND C.codconvenio = CM.codconvenio AND M.codmedico = C.codmedico AND MC.codmedico = M.codmedico AND MC.codconvenio = CM.codconvenio AND MC.codmedico = C.codmedico AND MC.codconvenio = C.codconvenio) as 'Valor total das consultas do convênio' FROM medico as M, consulta as C, convenio as CM, rel_medico_convenio as MC
+WHERE (M.nomemedico = 'João Nogueira' OR M.nomemedico = 'Izabel Duarte') AND M.codmedico = C.codmedico AND CM.codconvenio = C.codconvenio AND MC.codmedico = C.codmedico AND MC.codconvenio = C.codconvenio AND MC.codmedico = M.codmedico AND MC.codconvenio = CM.codconvenio
+GROUP BY CM.nomeconvenio ORDER BY M.nomemedico, CM.nomeconvenio ASC;
