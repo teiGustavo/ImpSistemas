@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ExemploMenus.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPrincipal"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="59"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCliente"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ufornecedor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadFornecedor"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFornecedor"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadProdutos"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UProdutos"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="11">
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="23" Column="45" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="30" Column="65" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="37" Column="23" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="38" Column="3" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="49" Column="3" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="45" Column="29" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="uprodutos.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="46" Column="6"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="48" Column="6" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="63" Column="3" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="58" Column="3" TopLine="41"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

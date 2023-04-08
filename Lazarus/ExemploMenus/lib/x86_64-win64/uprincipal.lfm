@@ -1,0 +1,43 @@
+object Form1: TForm1
+  Left = 325
+  Height = 240
+  Top = 121
+  Width = 361
+  Caption = 'Principal'
+  ClientHeight = 220
+  ClientWidth = 361
+  Menu = MenuPrincipal
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object Label1: TLabel
+    Left = 150
+    Height = 15
+    Top = 96
+    Width = 60
+    Caption = 'Bem vindo!'
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 111
+    Height = 15
+    Top = 120
+    Width = 138
+    Caption = 'Escolha uma opção acima'
+  end
+  object MenuPrincipal: TMainMenu
+    Left = 176
+    Top = 24
+    object MenuItemCliente: TMenuItem
+      Caption = 'Cadastro Cliente'
+      OnClick = MenuItemClienteClick
+    end
+    object MenuItemFornecedor: TMenuItem
+      Caption = 'Cadastro Fornecedor'
+      OnClick = MenuItemFornecedorClick
+    end
+    object MenuItemProduto: TMenuItem
+      Caption = 'Cadastro Produto'
+      OnClick = MenuItemProdutoClick
+    end
+  end
+end

@@ -1,0 +1,8 @@
+object FormCadFornecedor: TFormCadFornecedor
+  Left = 691
+  Height = 240
+  Top = 134
+  Width = 320
+  Caption = 'Cadastro Fornecedor'
+  LCLVersion = '2.2.0.4'
+end
